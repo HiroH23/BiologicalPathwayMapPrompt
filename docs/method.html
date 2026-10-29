@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method notes &middot; Evidence-Tracked Pathway Map Prompt</title>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --panel: #ffffff;
+    --ink: #1a1a18;
+    --ink-soft: #55534e;
+    --rule: #ddd9d2;
+    --accent: #1f4e79;
+    --warn: #8a4a00;
+    --code-bg: #f3f1ec;
+    --maxw: 860px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16171a; --panel: #1d1f23; --ink: #e8e6e1; --ink-soft: #a7a49d;
+      --rule: #32353b; --accent: #7fb3e0; --warn: #d79a52; --code-bg: #24262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16171a; --panel: #1d1f23; --ink: #e8e6e1; --ink-soft: #a7a49d;
+    --rule: #32353b; --accent: #7fb3e0; --warn: #d79a52; --code-bg: #24262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 80px; }
+  header { border-bottom: 1px solid var(--rule); padding: 56px 0 28px; margin-bottom: 36px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .lede { color: var(--ink-soft); font-size: 1.06rem; margin: 0 0 20px; max-width: 62ch; }
+  h2 { font-size: 1.22rem; margin: 44px 0 12px; letter-spacing: -0.005em; }
+  h3 { font-size: 1rem; margin: 26px 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code, kbd { background: var(--code-bg); border-radius: 3px; padding: 1px 5px; font-size: 0.88em;
+              font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  pre { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px;
+        padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0 0 16px; }
+  pre code { background: none; padding: 0; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; border: 1px solid var(--rule); background: var(--panel);
+         color: var(--ink); text-decoration: none; padding: 8px 15px; border-radius: 6px;
+         font-size: 0.9rem; }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.primary:hover { opacity: 0.9; color: #fff; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 0 0 18px; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { font-weight: 600; color: var(--ink-soft); font-size: 0.82rem;
+       text-transform: uppercase; letter-spacing: 0.04em; }
+  td code { white-space: nowrap; }
+  figure { margin: 0 0 18px; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--rule);
+               border-radius: 6px; background: #fff; }
+  figcaption { color: var(--ink-soft); font-size: 0.84rem; margin-top: 8px; }
+  .note { border-left: 3px solid var(--warn); background: var(--panel);
+          padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 0 0 18px; font-size: 0.93rem; }
+  .note strong { color: var(--warn); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 0 0 18px; }
+  .card { border: 1px solid var(--rule); background: var(--panel);
+          border-radius: 8px; padding: 14px 16px; }
+  .card h3 { margin-top: 0; }
+  .card p { margin-bottom: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  footer { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 20px;
+           color: var(--ink-soft); font-size: 0.86rem; }
+  @media (max-width: 520px) { h1 { font-size: 1.55rem; } header { padding-top: 36px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Method notes</h1>
+  <p class="lede">Design rationale behind the template. The rules themselves live in
+  <code>prompts/</code>.</p>
+  <div class="btns">
+    <a class="btn" href="index.html">&larr; Overview</a>
+    <a class="btn" href="../prompts/pathway-map-prompt.en.md">Template (English)</a>
+    <a class="btn" href="../prompts/pathway-map-prompt.ja.md">Template (日本語)</a>
+  </div>
+</header>
+<h1>Method notes</h1>
+<p>Design rationale behind the template. This document explains <em>why</em> the rules are what they are; the rules themselves live in <code>prompts/</code>.</p>
+<h2>1. Two gradings, not one confidence score</h2>
+<p>Every relation carries two independent values.</p>
+<p><strong>Evidence level (E)</strong> describes how directly the relation was demonstrated.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Meaning</th>
+<th>Typical experiment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td>Direct</td>
+<td>purified protein / in vitro reaction, direct binding, ChIP + reporter mutation</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>Perturbation-dependent</td>
+<td>knockdown, knockout, inhibitor, overexpression changes the downstream readout</td>
+</tr>
+<tr>
+<td>E3</td>
+<td>Indirect</td>
+<td>perturbation effect shown, but a mediator may intervene</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>Association only</td>
+<td>correlation, co-expression, co-localisation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Context fit (C)</strong> describes how well the experimental system matches the map's target.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>species, disease, cell/tissue and condition all match</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>species matches; cell, disease or condition partly differs</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>different species, or an unrelated cell line</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>cell-free, computational prediction, or database annotation only</td>
+</tr>
+</tbody>
+</table>
+<p>These are orthogonal. A co-immunoprecipitation in HEK293 is E1/C3. A rescue experiment in the exact patient-derived line of interest is E2/C1. A single score cannot represent both, and which weakness matters depends on what the map is for — so the template keeps them apart and records both.</p>
+<p>A relation enters the <strong>main pathway</strong> only if it is C1-C2 <em>and</em> carries at least one piece of E1-E3 evidence. Everything else is either a <strong>candidate pathway</strong> (drawn, broken) or <strong>held-back information</strong> (not drawn, reason recorded).</p>
+<h2>2. The visual grammar</h2>
+<p>Three independent visual channels, none of which is colour:</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Encodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrowhead / connector shape</td>
+<td>type of action (conversion, catalysis, stimulation, inhibition, transcriptional regulation)</td>
+</tr>
+<tr>
+<td>Line style (solid / broken)</td>
+<td>pathway layer (main / candidate)</td>
+</tr>
+<tr>
+<td>Position and compartment boxes</td>
+<td>subcellular localisation</td>
+</tr>
+</tbody>
+</table>
+<p>Colour may mirror the biological type for scanning convenience, but no meaning depends on it. This keeps the figure readable in greyscale and for colour-vision-deficient readers, and it means a reader can tell "this arrow rests on an association in a different cell type" from the line itself rather than from a table.</p>
+<p>The legend is required to cover only the symbols actually used, which stops it becoming a generic key that readers skip.</p>
+<h2>3. mRNA nodes as gene-product-level summaries</h2>
+<p>Papers routinely report both transcript and protein for a factor. Drawing both nodes for every factor doubles the map without adding mechanism.</p>
+<p>The template collapses them onto the mRNA node <strong>only when both move in the same direction</strong>, and requires that the figure annotate such a node as a gene-product-level functional summary. Two consequences follow:</p>
+<ul>
+<li>Collapsing is not evidence that transcription is the dominant mechanism. Protein nodes are retained separately wherever modification, localisation or enzymatic action is part of the explanation.</li>
+<li>Where transcript and protein move in <em>opposite</em> directions, that is a finding, not noise. The template forbids collapsing and requires the discrepancy to be recorded.</li>
+</ul>
+<p>A <code>gene → mRNA → protein</code> chain is never added automatically. Each such edge must correspond to a source that actually reasons across both levels.</p>
+<h2>4. State splitting</h2>
+<p>Phosphorylation, localisation and activity can each be represented as a state split. Mechanically expanding every combination produces a map that is technically richer and practically unreadable.</p>
+<p>The criterion is: <strong>does the difference change the downstream action?</strong> If a note on the phosphorylated node already conveys the activity state, no separate "active" node is added.</p>
+<p>Three inferences are explicitly forbidden because models make them by default:</p>
+<ul>
+<li>Phosphorylation is not activation unless shown.</li>
+<li>"Inhibits nuclear import" is not "promotes nuclear export".</li>
+<li>A candidate found by search is not thereby the mediator in the original experiment.</li>
+</ul>
+<h2>5. Enzymes versus scaffolds</h2>
+<p>Factors that assist a conversion attach to an <strong>Anchor</strong> on the conversion edge, not to the product node. This keeps "A becomes B" visually distinct from "C helps A become B".</p>
+<p>The template requires distinguishing enzymes, transport cofactors, scaffold factors and allosteric regulators. In the worked example this produced a concrete correction: the first draft attached both SENP3 and CHTOP to the same Anchor, but the source describes CHTOP as <em>recruiting the SENP3-containing complex</em>. The final map draws CHTOP → SENP3 as its own complex-assembly edge, with only SENP3 as catalysis on the Anchor.</p>
+<h2>6. Isoform uncertainty</h2>
+<p>Where a source names a pathway rather than an isoform ("canonical PI3K/AKT/GSK3β signalling"), the template requires notation that preserves the uncertainty — <code>AKT1 and/or AKT2 and/or AKT3</code> — rather than silently picking one. Where an Xref is needed for a node like that, it points at one isoform as a documented placeholder, and the workbook says so.</p>
+<h2>7. Gaps and conflicts</h2>
+<p><strong>Gaps.</strong> Where no adequate evidence exists, the template requires <code>Mediator unresolved</code> on the figure. A plausible candidate is not a substitute for evidence.</p>
+<p><strong>Negative searches.</strong> If differently worded queries all return nothing, that is recorded as "no hits in the retrieved set" — which is not the same claim as "the field holds no evidence". The distinction matters because a model cannot tell the two apart from search results alone.</p>
+<p><strong>Conflicts.</strong> Where findings about the same relation disagree, both are recorded, the edge or node is annotated "conflicting evidence", and the Review sheet records which was adopted and why. The worked example contains one: one paper shows NRF2 perturbation bidirectionally changes migration, another finds NRF2 barely induced by oxaliplatin and attributes EMT to a different axis. The former was adopted, because it perturbs NRF2 itself rather than testing a drug stimulus.</p>
+<p><strong>Retractions.</strong> Retracted papers and papers under an expression of concern are excluded, with the exclusion recorded rather than silently dropped.</p>
+<p><strong>Cross-paper chains.</strong> Where relations from different papers are joined into a pathway, the <code>cross-paper chain</code> column is flagged, making explicit that the chain as a whole was not demonstrated under one set of conditions.</p>
+<h2>8. Why validation is scripted</h2>
+<p>Visual self-assessment is unreliable. The template specifies mechanical checks instead, and the worked example demonstrates why: the first draft passed a reading-level review but the scripted checks found eight edges passing through unrelated node rectangles, and XSD validation found two encoding bugs (double float suffixes producing <code>179.0.0</code>, and schema-disallowed attributes on <code>&lt;State&gt;</code> elements).</p>
+<p>The checks that matter most, in rough order of how often they catch something:</p>
+<ol>
+<li><strong>Edge-through-node, per segment.</strong> A line crossing a node box reads as a connection that is not there. This requires checking every segment of routed polylines, not just endpoints.</li>
+<li><strong>XSD validation</strong> against the official GPML2013a schema. Hand-written GPML looks fine and fails to load.</li>
+<li><strong>Evidence-to-style consistency.</strong> No E4 or C3/C4 relation may be drawn solid. This is the check that catches the map quietly overstating its own evidence.</li>
+<li><strong>Bidirectional ID correspondence</strong> between workbook and GPML. One-directional checks miss rows added to only one artifact.</li>
+<li>GraphId uniqueness, reference resolution, vocabulary, node overlap, orphan nodes.</li>
+</ol>
+<p><strong>Format-validated and rendering-confirmed are different claims.</strong> The template requires keeping them distinct in the delivery report. A GPML that validates against the XSD may still lay out differently in PathVisio.</p>
+<h2>9. What the template does not do</h2>
+<p>It does not verify biology. It records what the retrieved papers state, applies a documented grading, and makes the reasoning auditable — which is a different thing from being right.</p>
+<p>Grading is performed by a language model and is not reproducible run to run. E and C values should be read as the model's documented reasoning about each source, to be checked, not as measurements.</p>
+<p>Evidence quality is bounded by what the model could actually read. An abstract-only run is a starting point for manual verification, and the template requires it to be labelled as one.</p>
+<footer><p>MIT licensed.</p></footer>
+</div>
+</body>
+</html>

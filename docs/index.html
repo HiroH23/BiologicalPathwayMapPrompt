@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence-Tracked Pathway Map Prompt</title>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --panel: #ffffff;
+    --ink: #1a1a18;
+    --ink-soft: #55534e;
+    --rule: #ddd9d2;
+    --accent: #1f4e79;
+    --warn: #8a4a00;
+    --code-bg: #f3f1ec;
+    --maxw: 860px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16171a; --panel: #1d1f23; --ink: #e8e6e1; --ink-soft: #a7a49d;
+      --rule: #32353b; --accent: #7fb3e0; --warn: #d79a52; --code-bg: #24262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16171a; --panel: #1d1f23; --ink: #e8e6e1; --ink-soft: #a7a49d;
+    --rule: #32353b; --accent: #7fb3e0; --warn: #d79a52; --code-bg: #24262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 80px; }
+  header { border-bottom: 1px solid var(--rule); padding: 56px 0 28px; margin-bottom: 36px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .lede { color: var(--ink-soft); font-size: 1.06rem; margin: 0 0 20px; max-width: 62ch; }
+  h2 { font-size: 1.22rem; margin: 44px 0 12px; letter-spacing: -0.005em; }
+  h3 { font-size: 1rem; margin: 26px 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code, kbd { background: var(--code-bg); border-radius: 3px; padding: 1px 5px; font-size: 0.88em;
+              font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  pre { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px;
+        padding: 14px 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0 0 16px; }
+  pre code { background: none; padding: 0; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; border: 1px solid var(--rule); background: var(--panel);
+         color: var(--ink); text-decoration: none; padding: 8px 15px; border-radius: 6px;
+         font-size: 0.9rem; }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.primary:hover { opacity: 0.9; color: #fff; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 0 0 18px; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { font-weight: 600; color: var(--ink-soft); font-size: 0.82rem;
+       text-transform: uppercase; letter-spacing: 0.04em; }
+  td code { white-space: nowrap; }
+  figure { margin: 0 0 18px; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--rule);
+               border-radius: 6px; background: #fff; }
+  figcaption { color: var(--ink-soft); font-size: 0.84rem; margin-top: 8px; }
+  .note { border-left: 3px solid var(--warn); background: var(--panel);
+          padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 0 0 18px; font-size: 0.93rem; }
+  .note strong { color: var(--warn); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 0 0 18px; }
+  .card { border: 1px solid var(--rule); background: var(--panel);
+          border-radius: 8px; padding: 14px 16px; }
+  .card h3 { margin-top: 0; }
+  .card p { margin-bottom: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  footer { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 20px;
+           color: var(--ink-soft); font-size: 0.86rem; }
+  @media (max-width: 520px) { h1 { font-size: 1.55rem; } header { padding-top: 36px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Evidence-Tracked Pathway Map Prompt</h1>
+  <p class="lede">A prompt template that asks a general-purpose LLM to build a biological pathway
+  map from the literature &mdash; and to leave behind the evidence trail that produced it.</p>
+  <div class="btns">
+    <a class="btn primary" href="../prompts/pathway-map-prompt.en.md">Template (English)</a>
+    <a class="btn" href="../prompts/pathway-map-prompt.ja.md">Template (日本語)</a>
+    <a class="btn" href="method.html">Method notes</a>
+    <a class="btn" href="../examples/nrf2-colorectal-cancer/">Worked example</a>
+  </div>
+</header>
+
+<p>The output is two files that stay in sync: a <strong>GPML</strong> file (GPML2013a) that opens
+and edits natively in <a href="https://pathvisio.github.io/">PathVisio</a>, and an
+<strong>Excel workbook</strong> in which every node and every edge traces back to a specific
+observation in a specific paper. GraphIds in the GPML match row IDs in the workbook, in both
+directions.</p>
+
+<h2>What problem it addresses</h2>
+
+<p>Asking a model for &ldquo;a pathway diagram of X&rdquo; usually produces one of two failure
+modes: a picture pasted into a file that cannot be edited, or a plausible-looking network in which
+it is impossible to tell which arrows rest on a direct biochemical experiment, which rest on a
+knockdown, and which rest on a correlation observed in a different cell type.</p>
+
+<div class="grid">
+  <div class="card">
+    <h3>Two gradings, not one score</h3>
+    <p>Directness (E1&ndash;E4) and context fit (C1&ndash;C4) are recorded separately. A binding
+    assay in the wrong cell type and an indirect effect in the right model are different
+    weaknesses.</p>
+  </div>
+  <div class="card">
+    <h3>Grammar tied to evidence</h3>
+    <p>Arrowhead shape encodes the action. Line style encodes the pathway layer. Anything resting on
+    association alone is drawn broken, and the legend says so.</p>
+  </div>
+  <div class="card">
+    <h3>Gaps stay visible</h3>
+    <p>Where evidence is absent, the template requires <code>Mediator unresolved</code> rather than
+    a plausible filler. Empty searches are recorded as empty searches.</p>
+  </div>
+</div>
+
+<h2>The grading scheme</h2>
+
+<table>
+  <thead><tr><th>Evidence level</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><code>E1</code></td><td>Direct &mdash; purified protein / in vitro reaction, direct binding, ChIP + reporter mutation</td></tr>
+    <tr><td><code>E2</code></td><td>Perturbation-dependent &mdash; knockdown, knockout, inhibitor or overexpression changes the readout</td></tr>
+    <tr><td><code>E3</code></td><td>Indirect &mdash; perturbation effect shown, but a mediator may intervene</td></tr>
+    <tr><td><code>E4</code></td><td>Association only &mdash; correlation, co-expression, co-localisation</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <thead><tr><th>Context fit</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><code>C1</code></td><td>Species, disease, cell/tissue and condition all match</td></tr>
+    <tr><td><code>C2</code></td><td>Species matches; cell, disease or condition partly differs</td></tr>
+    <tr><td><code>C3</code></td><td>Different species, or an unrelated cell line</td></tr>
+    <tr><td><code>C4</code></td><td>Cell-free, computational prediction, or database annotation only</td></tr>
+  </tbody>
+</table>
+
+<p>A relation enters the <strong>main pathway</strong> only if it is C1&ndash;C2 <em>and</em> carries
+at least one piece of E1&ndash;E3 evidence. Everything else is a drawn-but-broken
+<strong>candidate pathway</strong>, or <strong>held-back information</strong> with the reason
+recorded. Full rationale in the <a href="method.html">method notes</a>.</p>
+
+<h2>Worked example: NRF2 in colorectal cancer</h2>
+
+<figure>
+  <img src="assets/NRF2_CRC_baseline_preview.png"
+       alt="Pathway map of NRF2 signalling in colorectal cancer: upstream regulators converging on NRF2, target genes, and phenotype outcomes.">
+  <figcaption>28 nodes, 34 reactions, 12 papers. Broken lines are candidate pathways.
+  <a href="assets/NRF2_CRC_baseline_preview.svg">SVG version</a> &middot;
+  <a href="../examples/nrf2-colorectal-cancer/">full example</a></figcaption>
+</figure>
+
+<p>Every route found for raising NRF2 level or activity in colorectal cancer turned out to be
+post-transcriptional: GDF15&ndash;AKT&ndash;GSK3&beta; stabilisation (with NRF2 driving
+<em>GDF15</em> in return, closing a feedback loop), UCKL1 stabilisation, HNRNPC acting on both
+transcript and protein, and CHTOP recruiting a SENP3 complex that deSUMOylates NRF2. The one
+negative regulator retrieved with direct promoter-binding evidence is FOXO3&nbsp;&rarr;&nbsp;KEAP1.</p>
+
+<p>The example is included partly because it did <em>not</em> come out clean:</p>
+
+<ul>
+  <li>Two of the five requested phenotypes &mdash; anoikis resistance and stemness &mdash; had
+  <strong>no colorectal-cancer evidence at all</strong>. Both are drawn as broken candidate arms
+  labelled <code>Mediator unresolved</code>.</li>
+  <li>One retrieved paper was <strong>retracted</strong>, and is recorded as excluded rather than
+  silently dropped.</li>
+  <li>One relation has <strong>directly conflicting evidence</strong>. Both findings are recorded,
+  along with which was adopted and why.</li>
+  <li>Three relations were <strong>downgraded to candidate</strong> because the only support was a
+  review article or an association.</li>
+</ul>
+
+<div class="note">
+  <strong>Caveat.</strong> All 12 papers in the example were read as PubMed abstracts only; no
+  figure panel was opened. Every observation row is marked <code>confirm = abstract</code>. The four
+  relations graded <code>E1</code> should be checked against the original figures before the map is
+  used for anything load-bearing.
+</div>
+
+<h2>Validation</h2>
+
+<p>The example ships with the script that produced it. Running it on the first draft found eight
+edges passing through unrelated node rectangles, and XSD validation found two genuine encoding bugs
+&mdash; which is why the checks are in the template.</p>
+
+<pre><code>[2]  XSD validation against GPML2013a.xsd: PASS
+[3]  GraphId uniqueness: PASS (83 unique ids)
+[4]  GraphRef / Anchor / GroupRef resolution: PASS
+[7]  node-node overlap: PASS (none)
+[8]  edge-through-node check: PASS
+[9a] Entities &lt;-&gt; DataNode IDs: PASS (28 nodes, both directions)
+[9b] Reactions &lt;-&gt; Interaction IDs: PASS (34 reactions, both directions)
+[10] evidence-to-style consistency: PASS. No E4/C3/C4 relation is drawn solid.</code></pre>
+
+<div class="note">
+  <strong>Format-validated is not rendering-confirmed.</strong> The GPML passes
+  <code>xmllint --noout --schema GPML2013a.xsd</code>, and the previews are rendered from the same
+  structural definition &mdash; but by a separate renderer, not by PathVisio. Details may differ
+  from how PathVisio lays the file out.
+</div>
+
+<h2>Scope and limits</h2>
+
+<ul>
+  <li>Produces a <strong>baseline map</strong>: no drug-intervention layer. Overlaying compounds is
+  a separate pass.</li>
+  <li>Does not verify biology. It records what the retrieved papers state, with the grading applied,
+  and makes the reasoning auditable &mdash; a different thing from being right.</li>
+  <li>Grading is applied by a language model and is <strong>not reproducible run to run</strong>.
+  Read E/C values as documented reasoning to be checked, not as measurements.</li>
+  <li>Evidence quality is bounded by what the model could read. Abstract-only runs are a starting
+  point for manual verification.</li>
+</ul>
+
+<footer>
+  <p>MIT licensed. The worked example cites published literature by PMID and DOI; those papers
+  remain under their own copyright, and nothing in the example reproduces source text.</p>
+</footer>
+
+</div>
+</body>
+</html>
