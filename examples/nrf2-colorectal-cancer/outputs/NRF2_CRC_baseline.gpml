@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NRF2 signalling in colorectal cancer malignant progression (baseline map)" Data-Source="Literature-derived, PubMed" Version="20261029" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Baseline, evidence-tracked map of NRF2 (NFE2L2) regulation and its downstream effectors in human colorectal cancer. Solid edges = main pathway (species/disease/cell match C1-C2 and evidence level E1-E3). Broken edges = candidate pathway (other systems, or association only). mRNA nodes are gene-product-level functional summaries, not claims that transcription is the dominant mechanism. No drug intervention layer is included. Node and edge GraphIds correspond to the Entities and Reactions sheets of the companion Excel file.</Comment>
+  <Graphics BoardWidth="1280.0" BoardHeight="1340.0" />
+  <DataNode TextLabel="MYC" GraphId="N001" Type="Protein">
+    <Comment>c-MYC. Upstream modulator of NRF2 in CRC cells.</Comment>
+    <Graphics CenterX="150.0" CenterY="165.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="4609" />
+  </DataNode>
+  <DataNode TextLabel="NFE2L2 mRNA" GraphId="N002" Type="Rna">
+    <Comment>Representative node for NFE2L2 gene-product level.</Comment>
+    <Graphics CenterX="150.0" CenterY="250.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="4780" />
+  </DataNode>
+  <DataNode TextLabel="FOXO3" GraphId="N003" Type="Protein">
+    <Comment>Binds the KEAP1 promoter directly.</Comment>
+    <Graphics CenterX="380.0" CenterY="165.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="2309" />
+  </DataNode>
+  <DataNode TextLabel="KEAP1 mRNA" GraphId="N004" Type="Rna">
+    <Graphics CenterX="380.0" CenterY="250.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="9817" />
+  </DataNode>
+  <DataNode TextLabel="GDF15" GraphId="N005" Type="Protein">
+    <Comment>Secreted; measured in serum and tumour tissue of L-OHP treated patients.</Comment>
+    <Graphics CenterX="900.0" CenterY="72.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="9518" />
+  </DataNode>
+  <DataNode TextLabel="CHTOP" GraphId="N006" Type="Protein">
+    <Comment>Recruits the SENP3-containing 5FMC complex. Scaffold / recruitment factor, not the enzyme.</Comment>
+    <Graphics CenterX="800.0" CenterY="270.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="26097" />
+  </DataNode>
+  <DataNode TextLabel="SENP3" GraphId="N007" Type="Protein">
+    <Comment>SUMO protease. Catalyses deSUMOylation of NRF2.</Comment>
+    <Graphics CenterX="800.0" CenterY="355.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="26168" />
+  </DataNode>
+  <DataNode TextLabel="AKT1 and/or AKT2 and/or AKT3" GraphId="N008" Type="Protein">
+    <Comment>Isoform not resolved in the source (reported as canonical PI3K/AKT/GSK3b signalling). Xref points to AKT1 only as a placeholder.</Comment>
+    <Graphics CenterX="1030.0" CenterY="160.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="207" />
+  </DataNode>
+  <DataNode TextLabel="GSK3B" GraphId="N009" Type="Protein">
+    <Graphics CenterX="1030.0" CenterY="250.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="2932" />
+  </DataNode>
+  <DataNode TextLabel="NRF2 (SUMOylated)" GraphId="N010" Type="Protein">
+    <Comment>State split kept because deSUMOylation is the step that sustains downstream HMOX1 expression.</Comment>
+    <Graphics CenterX="620.0" CenterY="330.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="4780" />
+  </DataNode>
+  <DataNode TextLabel="UCKL1" GraphId="N011" Type="Protein">
+    <Comment>Stabilises NRF2; effect is independent of its UMP/CMP synthesis activity.</Comment>
+    <Graphics CenterX="900.0" CenterY="470.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="54963" />
+  </DataNode>
+  <DataNode TextLabel="HNRNPC" GraphId="N012" Type="Protein">
+    <Comment>Dual action: shields NFE2L2 and SLC7A11 mRNAs from degradation, and binds both proteins.</Comment>
+    <Graphics CenterX="170.0" CenterY="330.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="3183" />
+  </DataNode>
+  <DataNode TextLabel="KEAP1" GraphId="N013" Type="Protein">
+    <Graphics CenterX="380.0" CenterY="420.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="9817" />
+  </DataNode>
+  <DataNode TextLabel="NRF2" GraphId="N014" Type="Protein">
+    <Comment>Central node. Cytosol/nucleus split deliberately NOT drawn in this baseline map.</Comment>
+    <Graphics CenterX="620.0" CenterY="420.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="4780" />
+  </DataNode>
+  <DataNode TextLabel="SLC7A11 mRNA" GraphId="N015" Type="Rna">
+    <Graphics CenterX="150.0" CenterY="560.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="23657" />
+  </DataNode>
+  <DataNode TextLabel="HMOX1 mRNA" GraphId="N016" Type="Rna">
+    <Comment>HO-1.</Comment>
+    <Graphics CenterX="330.0" CenterY="560.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="3162" />
+  </DataNode>
+  <DataNode TextLabel="TXNRD1 mRNA" GraphId="N017" Type="Rna">
+    <Comment>TR1.</Comment>
+    <Graphics CenterX="510.0" CenterY="560.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="7296" />
+  </DataNode>
+  <DataNode TextLabel="ABCB1 mRNA" GraphId="N018" Type="Rna">
+    <Comment>MDR1.</Comment>
+    <Graphics CenterX="690.0" CenterY="560.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="5243" />
+  </DataNode>
+  <DataNode TextLabel="GDF15 mRNA" GraphId="N019" Type="Rna">
+    <Comment>Closes the GDF15-NRF2 feedback loop.</Comment>
+    <Graphics CenterX="870.0" CenterY="560.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="9518" />
+  </DataNode>
+  <DataNode TextLabel="ATF4" GraphId="N020" Type="Protein">
+    <Comment>Candidate. Evidence from fibrosarcoma / lung adenocarcinoma, not CRC.</Comment>
+    <Graphics CenterX="870.0" CenterY="645.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" LineStyle="Broken" />
+    <Xref Database="Entrez Gene" ID="468" />
+  </DataNode>
+  <DataNode TextLabel="SLC7A11" GraphId="N021" Type="Protein">
+    <Comment>System Xc- light chain.</Comment>
+    <Graphics CenterX="150.0" CenterY="790.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="23657" />
+  </DataNode>
+  <DataNode TextLabel="GPX4" GraphId="N022" Type="Protein">
+    <Graphics CenterX="420.0" CenterY="790.0" Width="150.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" FillColor="ffffff" />
+    <Xref Database="Entrez Gene" ID="2879" />
+  </DataNode>
+  <DataNode TextLabel="Ferroptosis resistance" GraphId="N030" Type="Pathway">
+    <Comment>Reduced lipid peroxidation / reduced ferroptotic death.</Comment>
+    <Graphics CenterX="180.0" CenterY="900.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Chemoresistance (5-FU, L-OHP, CPT-11)" GraphId="N031" Type="Pathway">
+    <Graphics CenterX="600.0" CenterY="900.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Proliferation / Warburg effect" GraphId="N032" Type="Pathway">
+    <Graphics CenterX="880.0" CenterY="900.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Migration &amp; invasion" GraphId="N033" Type="Pathway">
+    <Comment>Conflicting context recorded in Review (see P901).</Comment>
+    <Graphics CenterX="1130.0" CenterY="900.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Anoikis resistance" GraphId="N034" Type="Pathway">
+    <Comment>Candidate. No CRC evidence found.</Comment>
+    <Graphics CenterX="240.0" CenterY="1010.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" LineStyle="Broken" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Stemness / CSC growth" GraphId="N035" Type="Pathway">
+    <Comment>Candidate. CRC evidence is drug-effect descriptive only.</Comment>
+    <Graphics CenterX="880.0" CenterY="1010.0" Width="210.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" FillColor="ffffff" LineStyle="Broken" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <State GraphRef="N010" TextLabel="S" GraphId="st001" StateType="ProteinModification">
+    <Comment>SUMO conjugation. Removed by SENP3 (see R006).</Comment>
+    <Graphics RelX="1.0" RelY="-1.0" Width="16.0" Height="16.0" ShapeType="Oval" FillColor="ffffff" />
+    <Xref Database="" ID="" />
+  </State>
+  <Interaction GraphId="R001">
+    <Comment>transcriptional regulation | evidence E2 | context fit C1 | papers P007 | c-MYC knockdown reduced Nrf2 signalling. Promoter occupancy not shown.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="150.0" Y="179.0" GraphRef="N001" RelX="0.0" RelY="1.0" />
+      <Point X="150.0" Y="236.0" GraphRef="N002" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R002">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P002,P007 | cross-paper chain | Gene-product-level summary: mRNA node stands for NFE2L2 output. Not a measured translation rate.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="150.0" Y="264.0" GraphRef="N002" RelX="0.0" RelY="1.0" />
+      <Point X="620.0" Y="406.0" GraphRef="N014" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R003">
+    <Comment>transcriptional regulation | evidence E1 | context fit C1 | papers P003 | FoxO3 binds the KEAP1 promoter directly.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="380.0" Y="179.0" GraphRef="N003" RelX="0.0" RelY="1.0" />
+      <Point X="380.0" Y="236.0" GraphRef="N004" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R004">
+    <Comment>functional effect on phenotype | evidence E3 | context fit C1 | papers P003 | Gene-product-level summary.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="380.0" Y="264.0" GraphRef="N004" RelX="0.0" RelY="1.0" />
+      <Point X="380.0" Y="406.0" GraphRef="N013" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R005">
+    <Comment>degradation-stability | evidence E2 | context fit C1 | papers P003 | KEAP1 induction suppresses the Nrf2 pathway in this system. Ubiquitin ligase step not separately drawn.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="455.0" Y="420.0" GraphRef="N013" RelX="1.0" RelY="0.0" />
+      <Point X="545.0" Y="420.0" GraphRef="N014" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R006">
+    <Comment>modification | evidence E2 | context fit C1 | papers P004 | deSUMOylation. SENP3 is the enzyme; CHTOP is the recruitment/scaffold factor.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="344.0" GraphRef="N010" RelX="0.0" RelY="1.0" />
+      <Point X="620.0" Y="406.0" GraphRef="N014" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5" GraphId="an_R006" Shape="None" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R007">
+    <Comment>activation | evidence E3 | context fit C1 | papers P005 | Reported as canonical PI3K/AKT/GSK3b signalling. Receptor and direct biochemistry not resolved.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="900.0" Y="86.0" GraphRef="N005" RelX="0.0" RelY="1.0" />
+      <Point X="1030.0" Y="146.0" GraphRef="N008" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R008">
+    <Comment>inactivation | evidence E3 | context fit C1 | papers P005 | Inhibitory phosphorylation of GSK3b inferred from pathway assignment, not shown site-resolved here.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1030.0" Y="174.0" GraphRef="N008" RelX="0.0" RelY="1.0" />
+      <Point X="1030.0" Y="236.0" GraphRef="N009" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R009">
+    <Comment>degradation-stability | evidence E3 | context fit C1 | papers P005 | Mediator between GSK3b and NRF2 degradation (e.g. bTrCP) unresolved in this map.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1030.0" Y="264.0" GraphRef="N009" RelX="0.0" RelY="1.0" />
+      <Point X="1030.0" Y="420.0" />
+      <Point X="695.0" Y="420.0" GraphRef="N014" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R010">
+    <Comment>degradation-stability | evidence E2 | context fit C1 | papers P006 | UCKL1 stabilises Nrf2.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="825.0" Y="470.0" GraphRef="N011" RelX="-1.0" RelY="0.0" />
+      <Point X="695.0" Y="420.0" GraphRef="N014" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R011">
+    <Comment>degradation-stability | evidence E2 | context fit C1 | papers P002 | mRNA stabilisation.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="170.0" Y="316.0" GraphRef="N012" RelX="0.0" RelY="-1.0" />
+      <Point X="150.0" Y="264.0" GraphRef="N002" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R012">
+    <Comment>degradation-stability | evidence E1 | context fit C1 | papers P002 | Direct protein interactome reported with NRF2.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="170.0" Y="344.0" GraphRef="N012" RelX="0.0" RelY="1.0" />
+      <Point X="620.0" Y="406.0" GraphRef="N014" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R013">
+    <Comment>degradation-stability | evidence E2 | context fit C1 | papers P002 | mRNA stabilisation.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="170.0" Y="344.0" GraphRef="N012" RelX="0.0" RelY="1.0" />
+      <Point X="150.0" Y="546.0" GraphRef="N015" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R014">
+    <Comment>degradation-stability | evidence E1 | context fit C1 | papers P002 | Direct protein interactome reported with SLC7A11.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="95.0" Y="330.0" GraphRef="N012" RelX="-1.0" RelY="0.0" />
+      <Point X="52.0" Y="330.0" />
+      <Point X="52.0" Y="790.0" />
+      <Point X="75.0" Y="790.0" GraphRef="N021" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R015">
+    <Comment>transcriptional regulation | evidence E2 | context fit C1 | papers P002,P006 | cross-paper chain</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="150.0" Y="546.0" GraphRef="N015" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R016">
+    <Comment>transcriptional regulation | evidence E2 | context fit C1 | papers P004,P009 | cross-paper chain</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="330.0" Y="546.0" GraphRef="N016" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R017">
+    <Comment>transcriptional regulation | evidence E2 | context fit C1 | papers P003 | TR1 is described as a pivotal Nrf2 target gene.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="510.0" Y="546.0" GraphRef="N017" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R018">
+    <Comment>transcriptional regulation | evidence E4 | context fit C1 | papers P009 | Association only: MDR1-overexpressing resistant cells also show higher Nrf-2/HO-1. Direct ARE regulation not shown.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="690.0" Y="546.0" GraphRef="N018" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R019">
+    <Comment>transcriptional regulation | evidence E1 | context fit C1 | papers P005 | ChIP and luciferase reporter reported.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="870.0" Y="546.0" GraphRef="N019" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R020">
+    <Comment>functional effect on phenotype | evidence E3 | context fit C1 | papers P005 | Gene-product-level summary; closes the feedback loop.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="945.0" Y="560.0" GraphRef="N019" RelX="1.0" RelY="0.0" />
+      <Point X="1160.0" Y="560.0" />
+      <Point X="1160.0" Y="72.0" />
+      <Point X="975.0" Y="72.0" GraphRef="N005" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R021">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P002 | Gene-product-level summary.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="150.0" Y="574.0" GraphRef="N015" RelX="0.0" RelY="1.0" />
+      <Point X="150.0" Y="776.0" GraphRef="N021" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R022">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P002,P006,P012 | cross-paper chain | SLC7A11 up-regulation rescues the ferroptosis phenotype.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="150.0" Y="804.0" GraphRef="N021" RelX="0.0" RelY="1.0" />
+      <Point X="180.0" Y="883.0" GraphRef="N030" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R023">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P012</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="420.0" Y="804.0" GraphRef="N022" RelX="0.0" RelY="1.0" />
+      <Point X="180.0" Y="883.0" GraphRef="N030" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R024">
+    <Comment>transcriptional regulation | evidence E4 | context fit C1 | papers P008,P012 | cross-paper chain | GPX4 moves with NRF2 activation but ARE-level regulation in CRC not demonstrated. Mediator unresolved.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="420.0" Y="470.0" />
+      <Point X="420.0" Y="730.0" />
+      <Point X="420.0" Y="776.0" GraphRef="N022" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R025">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P003 | TR1 lowers intracellular ROS and promotes 5-FU resistance.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="510.0" Y="574.0" GraphRef="N017" RelX="0.0" RelY="1.0" />
+      <Point X="600.0" Y="883.0" GraphRef="N031" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R026">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P004</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="330.0" Y="574.0" GraphRef="N016" RelX="0.0" RelY="1.0" />
+      <Point X="600.0" Y="883.0" GraphRef="N031" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R027">
+    <Comment>functional effect on phenotype | evidence E4 | context fit C1 | papers P009 | Association only.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="690.0" Y="574.0" GraphRef="N018" RelX="0.0" RelY="1.0" />
+      <Point X="600.0" Y="883.0" GraphRef="N031" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R028">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P002 | Escape from therapy-induced ferroptosis attenuates CPT-11 cytotoxicity.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="285.0" Y="900.0" GraphRef="N030" RelX="1.0" RelY="0.0" />
+      <Point X="495.0" Y="900.0" GraphRef="N031" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R029">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P008 | Iron exposure promoted the Warburg effect via ROS and NRF2 activation.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="434.0" GraphRef="N014" RelX="0.0" RelY="1.0" />
+      <Point X="780.0" Y="470.0" />
+      <Point X="780.0" Y="860.0" />
+      <Point X="880.0" Y="883.0" GraphRef="N032" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R030">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C1 | papers P007 | shNrf2 and brusatol enhanced, tBHQ attenuated inhibition of migration/invasion.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="695.0" Y="420.0" GraphRef="N014" RelX="1.0" RelY="0.0" />
+      <Point X="1205.0" Y="460.0" />
+      <Point X="1205.0" Y="870.0" />
+      <Point X="1130.0" Y="883.0" GraphRef="N033" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R031">
+    <Comment>transcriptional regulation | evidence E2 | context fit C3 | papers P010 | ATF4 and NRF2 converge on the HMOX1 promoter. Non-CRC system.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="795.0" Y="645.0" GraphRef="N020" RelX="-1.0" RelY="0.0" />
+      <Point X="330.0" Y="620.0" />
+      <Point X="330.0" Y="574.0" GraphRef="N016" RelX="0.0" RelY="1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R032">
+    <Comment>functional effect on phenotype | evidence E2 | context fit C3 | papers P010 | HO-1 re-expression blocked anoikis in ATF4-deficient fibrosarcoma cells. No CRC evidence.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="330.0" Y="574.0" GraphRef="N016" RelX="0.0" RelY="1.0" />
+      <Point X="330.0" Y="975.0" />
+      <Point X="240.0" Y="993.0" GraphRef="N034" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R033">
+    <Comment>functional effect on phenotype | evidence E4 | context fit C2 | papers P011 | NRF2/KEAP1 signalling described downstream of a drug combination in colospheroids. Mediator unresolved.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0" LineStyle="Broken">
+      <Point X="695.0" Y="420.0" GraphRef="N014" RelX="1.0" RelY="0.0" />
+      <Point X="1005.0" Y="445.0" />
+      <Point X="1005.0" Y="990.0" />
+      <Point X="985.0" Y="1010.0" GraphRef="N035" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="R034">
+    <Comment>complex assembly | evidence E2 | context fit C1 | papers P004 | CHTOP recruits the SENP3-containing 5FMC complex. Drawn as recruitment of the enzyme rather than as a second helper on R006, which is what the source describes.</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="800.0" Y="284.0" GraphRef="N006" RelX="0.0" RelY="1.0" />
+      <Point X="800.0" Y="341.0" GraphRef="N007" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="H001">
+    <Comment>catalysis onto R006 | source SENP3 | see Reactions sheet row R006</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="725.0" Y="355.0" GraphRef="N007" RelX="-1.0" RelY="0.0" />
+      <Point X="620.0" Y="375.0" GraphRef="an_R006" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="LEGEND" GraphId="LG001">
+    <Graphics CenterX="620.0" CenterY="1100.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontWeight="Bold" />
+  </Label>
+  <Label TextLabel="Arrowhead = type of action:  conversion / catalysis / stimulation / inhibition / transcriptional regulation" GraphId="LG002">
+    <Graphics CenterX="620.0" CenterY="1120.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Solid line = main pathway (context fit C1-C2, evidence E1-E3).   Broken line = candidate pathway (other system, or association only)." GraphId="LG003">
+    <Graphics CenterX="620.0" CenterY="1138.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Boxes = subcellular compartment. The nucleus is drawn twice; both regions are the same compartment." GraphId="LG004">
+    <Graphics CenterX="620.0" CenterY="1156.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Rna nodes are gene-product-level summaries. mRNA-to-protein edges are not measured translation steps." GraphId="LG005">
+    <Graphics CenterX="620.0" CenterY="1174.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="'S' state mark on NRF2 = SUMO conjugation, removed by SENP3.   Colour carries no meaning in this map." GraphId="LG006">
+    <Graphics CenterX="620.0" CenterY="1192.0" Width="1140.0" Height="18.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Mediator unresolved (anoikis arm: no CRC evidence)" GraphId="LG100">
+    <Graphics CenterX="520.0" CenterY="960.0" Width="330.0" Height="16.0" ZOrder="28672" FontSize="8" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Mediator unresolved (stemness arm)" GraphId="LG101">
+    <Graphics CenterX="840.0" CenterY="960.0" Width="250.0" Height="16.0" ZOrder="28672" FontSize="8" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Extracellular" GraphId="LBC001">
+    <Graphics CenterX="190.0" CenterY="52.0" Width="290.0" Height="16.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontStyle="Italic" />
+  </Label>
+  <Label TextLabel="Cytosol" GraphId="LBC002">
+    <Graphics CenterX="190.0" CenterY="127.0" Width="290.0" Height="16.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontStyle="Italic" />
+  </Label>
+  <Label TextLabel="Nucleus (upstream transcription)" GraphId="LBC003">
+    <Graphics CenterX="210.0" CenterY="142.0" Width="290.0" Height="16.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontStyle="Italic" />
+  </Label>
+  <Label TextLabel="Nucleus (NRF2 target genes) - same compartment, shown twice" GraphId="LBC004">
+    <Graphics CenterX="220.0" CenterY="517.0" Width="290.0" Height="16.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontStyle="Italic" />
+  </Label>
+  <Label TextLabel="Phenotypic outcome" GraphId="LBC005">
+    <Graphics CenterX="190.0" CenterY="867.0" Width="290.0" Height="16.0" ZOrder="28672" FontSize="9" Valign="Middle" Align="Left" FontStyle="Italic" />
+  </Label>
+  <Shape GraphId="C001">
+    <Graphics CenterX="645.0" CenterY="72.5" Width="1210.0" Height="65.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="999999" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="C002">
+    <Graphics CenterX="630.0" CenterY="472.5" Width="1180.0" Height="715.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="999999" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="C003">
+    <Graphics CenterX="270.0" CenterY="209.0" Width="420.0" Height="158.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="999999" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="C004">
+    <Graphics CenterX="527.5" CenterY="597.5" Width="915.0" Height="185.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="999999" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="C005">
+    <Graphics CenterX="645.0" CenterY="960.0" Width="1210.0" Height="210.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="999999" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P001">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40608117</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NRF2 as a ferroptosis gatekeeper in colorectal cancer: implications for therapy</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naunyn Schmiedebergs Arch Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abdelgawwad El-Sehrawy AAM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P002">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41366407</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HNRNPC reprograms cancer metabolism to drive acquired chemoresistance in colorectal cancer by repressing of Nrf2/SLC7A11-dependent ferroptosis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Commun Signal</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu X</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P003">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31811910</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FoxO3 reverses 5-fluorouracil resistance in human colorectal cancer cells by inhibiting the Nrf2/TR1 signaling pathway</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P004">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42617575</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHTOP regulates the NRF2/HO-1 axis to modulate chemoresistance in colorectal cancer</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Redox Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2026</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P005">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38386232</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GDF15 induces chemoresistance to oxaliplatin by forming a reciprocal feedback loop with Nrf2 to maintain redox homeostasis in colorectal cancer</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Oncol (Dordr)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P006">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37343364</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-canonical role of UCKL1 on ferroptosis defence in colorectal cancer</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EBioMedicine</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu W</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P007">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38452690</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arenobufagin inhibits lung metastasis of colorectal cancer by targeting c-MYC/Nrf2 axis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phytomedicine</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P008">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34094899</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iron Regulates the Warburg Effect and Ferroptosis in Colorectal Cancer</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Oncol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuan Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P009">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33838628</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upregulation of NOX-2 and Nrf-2 Promotes 5-Fluorouracil Resistance of Human Colon Carcinoma (HCT-116) Cells</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry (Mosc)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waghela BN</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P010">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26011642</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATF4-dependent induction of heme oxygenase 1 prevents anoikis and promotes metastasis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dey S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P011">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40127816</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Targeting mitochondrial ribosomal protein expression by andrographolide and melatonin for colon cancer treatment</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midde A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P012">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39012393</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel antitumor mechanism of triptonide in colorectal cancer: inducing ferroptosis via the SLC7A11/GPX4 axis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funct Integr Genomics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang W</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="P901">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26733168</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactive oxygen species mediate oxaliplatin-induced epithelial-mesenchymal transition and invasive potential in colon cancer</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumour Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiao L</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
